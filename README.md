@@ -3,9 +3,20 @@ KineticJS tips and tools
 
 KineticJS is an HTML5 Canvas JavaScript framework that enables high performance animations, transitions, node nesting, layering, filtering, caching, event handling for desktop and mobile applications, and much more.
 
+This is collection of any usefull KineticJS stuff.
+Please fork and make pull request or create issue if you have something interesting!
+
+Let's go!
+
 So many information you can find on site: [http://kineticjs.com/](http://kineticjs.com/)
 
 # Plugins:
+
+### for work with other libs and frameworks:
+
+* [KineticJS plugin for KnockoutJS](https://github.com/christophercurrie/knockout-kinetic)
+* [BackboneJS Plugin](https://github.com/slash-system/backbone.kineticview)
+
 
 # Performance:
 
@@ -38,11 +49,17 @@ Kinetic.pixelRatio = 1
 
 # IDE tools:
 
+# Examples with sources:
+
+// TODO test them...
+* https://github.com/thehung111/node-discussion-board
+* http://codefedonarts.com/2013/02/13/interactive-pie-chart-with-kineticjs-tutorial/
+* https://github.com/thehung111/simple-mobile-mockup
+
 # Articles:
 
 # Other:
 
-* [Backbone Plugin](https://github.com/slash-system/backbone.kineticview)
 * [Using kineticjs with coffeescript](http://stackoverflow.com/questions/14530450/coffeescript-class/14536430#14536430)
 * [Drag&Drop DOM image to canvas](http://stackoverflow.com/questions/16271450/kineticjs-drag-and-drop-image-from-dom-into-canvas/16311898#16311898)
 
