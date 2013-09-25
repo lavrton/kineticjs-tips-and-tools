@@ -52,6 +52,7 @@ Kinetic.pixelRatio = 1
 # Examples with sources:
 
 // TODO test them...
+* https://github.com/mindmup/mapjs
 * https://github.com/thehung111/node-discussion-board
 * http://codefedonarts.com/2013/02/13/interactive-pie-chart-with-kineticjs-tutorial/
 * https://github.com/thehung111/simple-mobile-mockup
