@@ -12,6 +12,9 @@ So many information you can find on site: [http://kineticjs.com/](http://kinetic
 
 # Plugins:
 
+* [Html to image converting](https://github.com/slash-system/KineticJS.HTML) (alpha)
+
+
 ### for work with other libs and frameworks:
 
 * [KineticJS plugin for KnockoutJS](https://github.com/christophercurrie/knockout-kinetic)
