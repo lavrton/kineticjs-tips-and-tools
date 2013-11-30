@@ -62,6 +62,12 @@ Kinetic.pixelRatio = 1
 
 # Articles:
 
+// TODO: check is it usefull and talking about current version
+* http://www.creativebloq.com/create-game-kineticjs-9134437
+* http://www.gamingthinktank.com/2013/06/03/tutorial-part-2-snake-game-using-html5-canvas-and-kineticjs/
+* http://www.creativebloq.com/create-game-kineticjs-9134437
+* http://www.script-tutorials.com/snake-game-using-html5-canvas-and-kineticjs/
+
 # Other:
 
 * [Using kineticjs with coffeescript](http://stackoverflow.com/questions/14530450/coffeescript-class/14536430#14536430)
