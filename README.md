@@ -13,6 +13,7 @@ So many information you can find on site: [http://kineticjs.com/](http://kinetic
 # Plugins:
 
 * [Html to image converting](https://github.com/slash-system/KineticJS.HTML) (alpha)
+* [KineticJS.PinchLayer](https://github.com/eduplus/pinchlayer) (outdated)
 
 
 ### for work with other libs and frameworks:
