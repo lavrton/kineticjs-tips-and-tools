@@ -97,7 +97,7 @@ declare module Kinetic {
     }
 
     interface CacheConfig extends SizeConfig{
-        showBorder? : number;
+        showBorder? : boolean;
     }
 
     interface ClearConfig extends SizeConfig{
@@ -188,11 +188,15 @@ declare module Kinetic {
         moveToBottom(): boolean;
         moveToTop(): boolean;
         moveUp(): boolean;
-        name() : number;
-        name(name: number) : This;
+        name() : string;
+        name(name: string) : This;
         noise() : number;
         noise(noise: number) : This;
         off(evtStr : string) : This;
+        offset() : Vector2d;
+        offset(offset: Vector2d) : This;
+        offsetX() : number;
+        offsetX(offsetX: number) : This;
         offsetY() : number;
         offsetY(offsetY: number) : This;
         on(evtStr : string, handler: Function) : This;
@@ -255,12 +259,12 @@ declare module Kinetic {
 
     interface ContainerConfig extends NodeConfig {
         clearBeforeDraw?: boolean;
-        clipFunc: Function;
+        clipFunc?: Function;
     }
 
     class Container<This> extends Node <This> {
-        constructor(ContainerConfig);
-        add(child : Node<Node<any>>);
+        constructor(params?: ContainerConfig);
+        add(child : Node<Node<any>>): This;
         clip(): SizeConfig;
         clip(clip: SizeConfig) : This;
         clipHeight(): number;
@@ -396,6 +400,10 @@ declare module Kinetic {
         fillPatternRotation(rotation: number): This;
         fillPatternScale(): Vector2d;
         fillPatternScale(scale: Vector2d) : This;
+        fillPatternScaleX(): number;
+        fillPatternScaleX(x: number): This;
+        fillPatternScaleY(): number;
+        fillPatternScaleY(y: number): This;
         fillPatternX(): number;
         fillPatternX(x: number): number;
         fillPatternY(): number;        
@@ -456,7 +464,7 @@ declare module Kinetic {
 
     class Stage extends Container<Stage> {
         constructor(StageConfig);
-        add(layer: Layer);
+        add(layer: Layer): Stage;
         batchDraw(): void;
         container(): HTMLElement;
         destroy() : void;
@@ -482,6 +490,7 @@ declare module Kinetic {
         clearBeforeDraw(val: boolean): Layer;
         hitGraphEnabled(): boolean;
         hitGraphEnabled(val: boolean): Layer;
+        batchDraw(): void;
     }
 
     class Group extends Container<Group> {
@@ -604,7 +613,7 @@ declare module Kinetic {
     }
 
     interface LineConfig extends ShapeConfig {
-        points: Vector2d[];
+        points: number[];
         tension?: number;
         closed?: boolean;
     }
@@ -615,8 +624,8 @@ declare module Kinetic {
         closed(closed: boolean): Line;
         tension(): number;
         tension(tension: number): Line;
-        points(): Vector2d[];
-        points(points: Vector2d[]): Line;
+        points(): number[];
+        points(points: number[]): Line;
     }
 
     interface RectConfig extends ShapeConfig {
