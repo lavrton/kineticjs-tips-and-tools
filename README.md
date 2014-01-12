@@ -72,6 +72,7 @@ Kinetic.pixelRatio = 1
 
 # Other:
 
+* [TypeScript Definition](https://github.com/lavrton/kineticjs-tips-and-tools/blob/master/typescript/kinetic.d.ts)
 * [Using kineticjs with coffeescript](http://stackoverflow.com/questions/14530450/coffeescript-class/14536430#14536430)
 * [Drag&Drop DOM image to canvas](http://stackoverflow.com/questions/16271450/kineticjs-drag-and-drop-image-from-dom-into-canvas/16311898#16311898)
 
