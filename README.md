@@ -12,6 +12,7 @@ So many information you can find on site: [http://kineticjs.com/](http://kinetic
 
 # Plugins:
 
+* [Crosshair Shape](https://github.com/binoculars/KineticJS-plugins/tree/master/src/shapes) (https://github.com/ericdrowell/KineticJS/pull/723)
 * [Html to image converting](https://github.com/slash-system/KineticJS.HTML) (alpha)
 * [KineticJS.PinchLayer](https://github.com/eduplus/pinchlayer) (outdated)
 
