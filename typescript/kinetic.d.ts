@@ -265,6 +265,7 @@ declare module Kinetic {
     class Container<This> extends Node <This> {
         constructor(params?: ContainerConfig);
         add(child : Node<Node<any>>): This;
+        getChildren() : Collection;
         clip(): SizeConfig;
         clip(clip: SizeConfig) : This;
         clipHeight(): number;
@@ -804,9 +805,11 @@ declare module Kinetic {
 
 
     class Collection {
+        [i : number] : any;
         static toCollection(arr: any[]): Collection;
         each(f: Function): void;
         toArray() : any[];
+        length: number;
     }
 
     class Transform {
