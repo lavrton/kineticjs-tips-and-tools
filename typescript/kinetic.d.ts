@@ -148,6 +148,7 @@ declare module Kinetic {
         getContext() : Context;
         getDepth() : number;
         getHeight() : number;
+        setHeight(height: number) : This;
         getHitCanvas() : Canvas;
         getLayer() : Layer;
         getParent() : Node<Node<any>>;
@@ -160,6 +161,7 @@ declare module Kinetic {
         getTransform() : Transform;
         getType() : String;
         getWidth() : number;
+        setWidth(width: number) : This;
         getZIndex(): number;
         green() : number;
         green(green: number) : This;
@@ -255,6 +257,10 @@ declare module Kinetic {
         x(x: number) : This;
         y() : number;
         y(y: number) : This;
+        getX() : number;
+        setX(x: number) : This;
+        getY() : number;
+        setY(x: number) : This;
     }
 
     interface ContainerConfig extends NodeConfig {
@@ -472,10 +478,8 @@ declare module Kinetic {
         drawHit(): void;
         getIntersection(pos: Vector2d) : Shape<Shape<any>>;
         getLayers(): Layer[];
-        getPoinerPosition(): Vector2d;
+        getPointerPosition(): Vector2d;
         setContainer(con: HTMLElement): void;
-        setHeight(height: number);
-        setWidth(width: number);
     }
 
     interface LayerConfig extends ContainerConfig {
@@ -576,6 +580,7 @@ declare module Kinetic {
         constructor(CircleConfig);
         radius(): number;
         radius(radius: number): Circle;
+        setRadius(radius: number): Circle;
     }
 
     interface EllipseConfig extends ShapeConfig {
@@ -627,6 +632,7 @@ declare module Kinetic {
         tension(tension: number): Line;
         points(): number[];
         points(points: number[]): Line;
+        setPoints(points: number[]): Line;
     }
 
     interface RectConfig extends ShapeConfig {
