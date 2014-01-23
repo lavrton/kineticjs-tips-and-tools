@@ -472,7 +472,7 @@ declare module Kinetic {
         drawHit(): void;
         getIntersection(pos: Vector2d) : Shape<Shape<any>>;
         getLayers(): Layer[];
-        getPoinerPosition(): any;
+        getPoinerPosition(): Vector2d;
         setContainer(con: HTMLElement): void;
         setHeight(height: number);
         setWidth(width: number);
