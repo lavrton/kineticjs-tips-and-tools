@@ -156,7 +156,7 @@ declare module Kinetic {
         getSize() : {
             width : number;
             height : number;
-        }
+        };
         getStage() : Stage;
         getTransform() : Transform;
         getType() : String;
@@ -226,7 +226,7 @@ declare module Kinetic {
         setAttr(attr: string, val : any): This;
         setAttrs(attrs: NodeConfig);
         setId(id: string) : This;
-        setSize(size: any, width: number, height: number) : This;
+        setSize(size: {width: number; height: number}) : This;
         setZIndex(zIndex: number): void;
         shouldDrawHit() : boolean;
         show() : This;
@@ -517,7 +517,7 @@ declare module Kinetic {
         setHeight(val: number);
         setWidth(val: number);
         setPixelRation(val: number);
-        setSize(size: {width:number; height: number});
+        setSize(width: number, height: number) : void;
         toDataURL(mimeType: string, quality: number) : string;
         private _canvas : HTMLElement;
     }
