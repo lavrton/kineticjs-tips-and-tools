@@ -31,6 +31,10 @@ First, look at tutorial section on site:
 * [Caching](http://www.html5canvastutorials.com/kineticjs/html5-canvas-shape-caching-with-kineticjs/)
 
 
+* Setting `transformsEnabled = 'position'` on shape
+* Setting `hitGraphEnabled = false` (if you don't need pointer events)
+
+
 Also this stackoverflow posts can be usefull:
 
 * http://stackoverflow.com/questions/16191324/performance-problems-with-html5-canvas-in-some-mobile-browsers
