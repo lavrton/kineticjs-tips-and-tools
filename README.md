@@ -32,7 +32,7 @@ First, look at tutorial section on site:
 
 
 * Setting `transformsEnabled = 'position'` on shape
-* Setting `hitGraphEnabled = false` (if you don't need pointer events)
+* Setting `hitGraphEnabled = false` on layer (if you don't need pointer events)
 
 
 Also this stackoverflow posts can be usefull:
