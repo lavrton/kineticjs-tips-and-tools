@@ -45,15 +45,30 @@ Also this stackoverflow posts can be usefull:
 
 ### Mobile tips:
 
-Tr to set set viewport:
+* Try to set viewport:
 ```
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 ```
 
-If you have bad perfomance on retina display you can try change pixelRation:
+* If you have bad perfomance on retina display you can try change pixelRation:
 ```
 Kinetic.pixelRatio = 1
 ``` 
+
+* On some android devices native canvas context function `getImageData` is slow. This one is using inside KineticJS to detect intersection with shape and pointer. If you have interactive application (with dragging) you may use this small hack:
+```javascript
+var oldFunc = this.layer._getIntersection;
+node.on("dragstart", () => {
+    this.layer._getIntersection = function(){
+        return node;
+    }
+});
+node.on("dragend", () => {
+    this.layer._getIntersection = oldFunc;
+});
+```
+Be carefull, it can break pointer event functionality while dragging, deepend on your application. See discussion: https://github.com/ericdrowell/KineticJS/issues/821
+
 
 # Posible problems:
 
