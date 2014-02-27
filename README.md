@@ -55,6 +55,11 @@ If you have bad perfomance on retina display you can try change pixelRation:
 Kinetic.pixelRatio = 1
 ``` 
 
+# Posible problems:
+
+## Ghost shapes
+
+Sometimes android device may have ghost shape on canvas. This is android bug. You can fix it by adding layer to stage with small (50ms) timeout. See for details: https://github.com/ericdrowell/KineticJS/issues/481#issuecomment-36096773
 
 # IDE tools:
 
