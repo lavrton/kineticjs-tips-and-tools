@@ -67,14 +67,30 @@ node.on("dragend", () => {
     this.layer._getIntersection = oldFunc;
 });
 ```
-Be carefull, it can break pointer event functionality while dragging, deepend on your application. See discussion: https://github.com/ericdrowell/KineticJS/issues/821
+Be carefull, it can break pointer event functionality while dragging, deepend on your application. You can try run this examples on you divece:
+
+1. Usual usage: http://jsfiddle.net/lavrton/Yp8gP/show/
+2. With hack: http://jsfiddle.net/lavrton/ANJ98/show
+3. 
+See discussion: https://github.com/ericdrowell/KineticJS/issues/821
 
 
 # Posible problems:
 
 ## Ghost shapes
 
-Sometimes android device may have ghost shape on canvas. This is android bug. You can fix it by adding layer to stage with small (50ms) timeout. See for details: https://github.com/ericdrowell/KineticJS/issues/481#issuecomment-36096773
+Sometimes android device may have ghost shape on canvas. This is android bug. You can fix it by drawing layer with small (50ms) timeout. See for details: https://github.com/ericdrowell/KineticJS/issues/481#issuecomment-36096773
+Example:
+```javascript
+var stage = new Kinetic.Stage(conf);
+var layer = new Kinetic.Layer();
+
+stage.add(layer);
+
+setTimeout(function(){
+    // add shapes to the layer and then do layer.draw()
+}, 50);
+```
 
 # IDE tools:
 
