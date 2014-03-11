@@ -91,6 +91,15 @@ setTimeout(function(){
 }, 50);
 ```
 
+Some android devices have problems if parents of canvas have `overflow:hidden`. This snippet may be helpful:
+```javascript
+if (navigator.userAgent.match(/Android/i)) {
+    $("canvas").parents("*").css("overflow", "visible");
+}
+```
+You can find more related information here:
+https://code.google.com/p/android/issues/detail?id=35474
+
 # IDE tools:
 
 # Examples with sources:
