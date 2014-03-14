@@ -118,6 +118,7 @@ https://code.google.com/p/android/issues/detail?id=35474
 * http://www.gamingthinktank.com/2013/06/03/tutorial-part-2-snake-game-using-html5-canvas-and-kineticjs/
 * http://www.creativebloq.com/create-game-kineticjs-9134437
 * http://www.script-tutorials.com/snake-game-using-html5-canvas-and-kineticjs/
+* http://cases.azoft.com/how-to-create-html5-canvas-animated-transitions-with-kineticjs/
 
 # Other:
 
