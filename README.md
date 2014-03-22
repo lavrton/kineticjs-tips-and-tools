@@ -26,13 +26,13 @@ So many information you can find on site: [http://kineticjs.com/](http://kinetic
 # Performance:
 
 First, look at tutorial section on site:
+
 * [Layers](http://www.html5canvastutorials.com/kineticjs/html5-canvas-layer-management-with-kineticjs/)
 * [BatchDraw](http://www.html5canvastutorials.com/kineticjs/html5-canvas-kineticjs-batch-draw/)
 * [Caching](http://www.html5canvastutorials.com/kineticjs/html5-canvas-shape-caching-with-kineticjs/)
-
-
 * Setting `transformsEnabled = 'position'` on shape
 * Setting `hitGraphEnabled = false` on layer (if you don't need pointer events)
+* Avoid to use shadows and strokes
 
 
 Also this stackoverflow posts can be usefull:
