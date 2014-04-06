@@ -120,6 +120,7 @@ https://code.google.com/p/android/issues/detail?id=35474
 * http://www.script-tutorials.com/snake-game-using-html5-canvas-and-kineticjs/
 * http://cases.azoft.com/how-to-create-html5-canvas-animated-transitions-with-kineticjs/
 * http://codefedonarts.com/2013/02/13/interactive-pie-chart-with-kineticjs-tutorial/
+* http://mihhaillapushkin.wordpress.com/2013/03/11/the-makings-of-a-mobile-canvas-game/
 
 # Other:
 
