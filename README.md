@@ -108,7 +108,7 @@ https://code.google.com/p/android/issues/detail?id=35474
 // TODO test them...
 * https://github.com/mindmup/mapjs
 * https://github.com/thehung111/node-discussion-board
-* http://codefedonarts.com/2013/02/13/interactive-pie-chart-with-kineticjs-tutorial/
+* https://github.com/mihhail-lapushkin/Ancient-Riddle
 * https://github.com/thehung111/simple-mobile-mockup
 
 # Articles:
@@ -119,6 +119,7 @@ https://code.google.com/p/android/issues/detail?id=35474
 * http://www.creativebloq.com/create-game-kineticjs-9134437
 * http://www.script-tutorials.com/snake-game-using-html5-canvas-and-kineticjs/
 * http://cases.azoft.com/how-to-create-html5-canvas-animated-transitions-with-kineticjs/
+* http://codefedonarts.com/2013/02/13/interactive-pie-chart-with-kineticjs-tutorial/
 
 # Other:
 
