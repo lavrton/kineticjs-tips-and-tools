@@ -114,6 +114,8 @@ https://code.google.com/p/android/issues/detail?id=35474
 # Articles:
 
 // TODO: check is it usefull and talking about current version
+// TODO: add descriptions
+
 * http://www.creativebloq.com/create-game-kineticjs-9134437
 * http://www.gamingthinktank.com/2013/06/03/tutorial-part-2-snake-game-using-html5-canvas-and-kineticjs/
 * http://www.creativebloq.com/create-game-kineticjs-9134437
@@ -121,6 +123,7 @@ https://code.google.com/p/android/issues/detail?id=35474
 * http://cases.azoft.com/how-to-create-html5-canvas-animated-transitions-with-kineticjs/
 * http://codefedonarts.com/2013/02/13/interactive-pie-chart-with-kineticjs-tutorial/
 * http://mihhaillapushkin.wordpress.com/2013/03/11/the-makings-of-a-mobile-canvas-game/
+* http://codeslashslashcomment.com/2012/12/12/dynamic-image-distortion-html5-canvas/#more-179
 
 # Other:
 
