@@ -57,14 +57,14 @@ Kinetic.pixelRatio = 1
 
 * On some android devices native canvas context function `getImageData` is slow. This one is using inside KineticJS to detect intersection with shape and pointer. If you have interactive application (with dragging) you may use this small hack:
 ```javascript
-var oldFunc = this.layer._getIntersection;
+var oldFunc = stage.getIntersection;
 node.on("dragstart", () => {
-    this.layer._getIntersection = function(){
+    stage.getIntersection = function(){
         return node;
     }
 });
 node.on("dragend", () => {
-    this.layer._getIntersection = oldFunc;
+    stage.getIntersection = oldFunc;
 });
 ```
 Be carefull, it can break pointer event functionality while dragging, deepend on your application. You can try run this examples on you divece:
