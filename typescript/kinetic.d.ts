@@ -1,6 +1,7 @@
 declare module Kinetic {
 
     var pixelRatio : number;
+    var dragDistance: number;
     var isDragging : () => boolean;
     var isDragReady : () => boolean;
 
@@ -10,43 +11,43 @@ declare module Kinetic {
     }
 
     export class Easings {
-        static BackEaseIn();
-        static BackEaseInOut();
-        static BackEaseOut();
-        static BounceEaseIn();
-        static BounceEaseInOut();
-        static BounceEaseOut();
-        static EaseIn();
-        static EaseInOut();
-        static EaseOut();
-        static ElasticEaseIn();
-        static ElasticEaseInOut();
-        static ElasticEaseOut();
-        static Linear();
-        static StrongEaseIn();
-        static StrongEaseInOut();
-        static StrongEaseOut();
+        static BackEaseIn() : any;
+        static BackEaseInOut() : any;
+        static BackEaseOut() : any;
+        static BounceEaseIn() : any;
+        static BounceEaseInOut() : any;
+        static BounceEaseOut() : any;
+        static EaseIn() : any;
+        static EaseInOut() : any;
+        static EaseOut() : any;
+        static ElasticEaseIn() : any;
+        static ElasticEaseInOut() : any;
+        static ElasticEaseOut() : any;
+        static Linear() : any;
+        static StrongEaseIn() : any;
+        static StrongEaseInOut() : any;
+        static StrongEaseOut() : any;
     }
 
     class Filter {
     }
 
     export class Filters {
-        static Blur(imageData): Filter;
-        static Brighten(imageData): Filter;
-        static Emboss(imageData): Filter;
-        static Enhance(imageData): Filter;
-        static Grayscale(imageData): Filter;
-        static HSV(imageData): Filter;
-        static Invert(imageData): Filter;
-        static Mask(imageData): Filter;
-        static Noise(imagedata): Filter;
-        static Pixelate(imageData): Filter;
-        static Posterize(imageData): Filter;
-        static RGB(imageData): Filter;
-        static Sepia(imageData): Filter;
-        static Solarize(imageData): Filter;
-        static Threshold(imageData): Filter;
+        static Blur(imageData : any): Filter;
+        static Brighten(imageData : any): Filter;
+        static Emboss(imageData : any): Filter;
+        static Enhance(imageData : any): Filter;
+        static Grayscale(imageData : any): Filter;
+        static HSV(imageData : any): Filter;
+        static Invert(imageData : any): Filter;
+        static Mask(imageData : any): Filter;
+        static Noise(imageData : any): Filter;
+        static Pixelate(imageData : any): Filter;
+        static Posterize(imageData : any): Filter;
+        static RGB(imageData : any): Filter;
+        static Sepia(imageData : any): Filter;
+        static Solarize(imageData : any): Filter;
+        static Threshold(imageData : any): Filter;
     }
 
     export class Animation {
@@ -105,7 +106,7 @@ declare module Kinetic {
 
     class Node<This> {
         constructor (config: NodeConfig);
-        static create(JSON: any, container?: HTMLElement);
+        static create<T>(JSON: any, container?: HTMLElement) : T;
 
         blue() : number;
         blue(blue: number) : This;
@@ -148,7 +149,6 @@ declare module Kinetic {
         getContext() : Context;
         getDepth() : number;
         getHeight() : number;
-        setHeight(height: number) : This;
         getHitCanvas() : Canvas;
         getLayer() : Layer;
         getParent() : Node<Node<any>>;
@@ -161,7 +161,6 @@ declare module Kinetic {
         getTransform() : Transform;
         getType() : String;
         getWidth() : number;
-        setWidth(width: number) : This;
         getZIndex(): number;
         green() : number;
         green(green: number) : This;
@@ -224,9 +223,9 @@ declare module Kinetic {
         scaleY(scaleY: number) : This;
         setAbsolutePosition(pos : Vector2d) : This;
         setAttr(attr: string, val : any): This;
-        setAttrs(attrs: NodeConfig);
+        setAttrs(attrs: NodeConfig) : void;
         setId(id: string) : This;
-        setSize(size: {width: number; height: number}) : This;
+        setSize(size: any, width: number, height: number) : This;
         setZIndex(zIndex: number): void;
         shouldDrawHit() : boolean;
         show() : This;
@@ -257,10 +256,6 @@ declare module Kinetic {
         x(x: number) : This;
         y() : number;
         y(y: number) : This;
-        getX() : number;
-        setX(x: number) : This;
-        getY() : number;
-        setY(x: number) : This;
     }
 
     interface ContainerConfig extends NodeConfig {
@@ -343,11 +338,11 @@ declare module Kinetic {
         shadowOpacity?: number;
         shadowEnabled?: boolean;
         dash?: number[];
-        dashEnabled: boolean;
+        dashEnabled?: boolean;
     }
 
     class Shape<This> extends Node <This> {
-        constructor(ShapeConfig);
+        constructor(ShapeConfig : ShapeConfig);
         dash() : number[];
         dash(dash: number[]): This;
         dashEnabled() : boolean;
@@ -470,7 +465,7 @@ declare module Kinetic {
     }
 
     class Stage extends Container<Stage> {
-        constructor(StageConfig);
+        constructor(StageConfig : StageConfig);
         add(layer: Layer): Stage;
         batchDraw(): void;
         container(): HTMLElement;
@@ -480,6 +475,8 @@ declare module Kinetic {
         getLayers(): Layer[];
         getPointerPosition(): Vector2d;
         setContainer(con: HTMLElement): void;
+        setHeight(height: number) : void;
+        setWidth(width: number) : void;
     }
 
     interface LayerConfig extends ContainerConfig {
@@ -496,6 +493,7 @@ declare module Kinetic {
         hitGraphEnabled(): boolean;
         hitGraphEnabled(val: boolean): Layer;
         batchDraw(): void;
+        drawScene() : void;
     }
 
     class Group extends Container<Group> {
@@ -509,17 +507,17 @@ declare module Kinetic {
     }
 
     class Canvas {
-        constructor(CanvasConfig);
+        constructor(CanvasConfig : CanvasConfig);
         getContext(): CanvasRenderingContext2D;
         getHeight(): number;
         getWidth(): number;
         getPixelRation(): number;
-        setHeight(val: number);
-        setWidth(val: number);
-        setPixelRation(val: number);
-        setSize(width: number, height: number) : void;
+        setHeight(val: number) : void;
+        setWidth(val: number) : void ;
+        setPixelRation(val: number) : void;
+        setSize(size: {width:number; height: number}) : void;
         toDataURL(mimeType: string, quality: number) : string;
-        private _canvas : HTMLElement;
+        public _canvas : HTMLElement;
     }
 
     class Context {
@@ -530,6 +528,11 @@ declare module Kinetic {
         getCanvas() : Kinetic.Canvas;
         getTrace(relaxed: boolean): string;
         reset(): void;
+        moveTo(x : number, y : number) : void;
+        lineTo(x : number, y : number) : void;
+        beginPath() : void;
+        setAttr(attr : string, value : any) : void;
+        closePath() : void;
         strokeShape(shape: Shape<any>): void;
     }
 
@@ -553,7 +556,7 @@ declare module Kinetic {
     }
 
     class Ring extends Shape<Ring> {
-        constructor(RingConfig);
+        constructor(RingConfig : RingConfig);
         angle(): number;
         angle(angle: number): Ring;
         innerRadius(): number;
@@ -567,7 +570,7 @@ declare module Kinetic {
     }
 
     class Arc extends Shape<Ring> {
-        constructor(ArcConfig);
+        constructor(ArcConfig : ArcConfig);
         clockwise(): boolean;
         clockwise(clockwise: boolean): Ring;
     }
@@ -577,10 +580,9 @@ declare module Kinetic {
     }
 
     class Circle extends Shape<Circle> {
-        constructor(CircleConfig);
+        constructor(CircleConfig : CircleConfig);
         radius(): number;
         radius(radius: number): Circle;
-        setRadius(radius: number): Circle;
     }
 
     interface EllipseConfig extends ShapeConfig {
@@ -588,7 +590,7 @@ declare module Kinetic {
     }
 
     class Ellipse extends Shape<Ellipse> {
-        constructor(EllipseConfig);
+        constructor(EllipseConfig : EllipseConfig);
         radius(): any;
         radius(radius: any): Ellipse;
         radiusX(): number;
@@ -603,7 +605,7 @@ declare module Kinetic {
     }
 
     class Image extends Shape<Image> {
-        constructor(ImageConfig);
+        constructor(ImageConfig : ImageConfig);
         image(): HTMLImageElement;
         image(image: HTMLImageElement): Image;
         crop(): SizeConfig;
@@ -625,14 +627,13 @@ declare module Kinetic {
     }
 
     class Line extends Shape<Line> {
-        constructor(LineConfig);
+        constructor(LineConfig : LineConfig);
         closed(): boolean;
         closed(closed: boolean): Line;
         tension(): number;
         tension(tension: number): Line;
         points(): number[];
         points(points: number[]): Line;
-        setPoints(points: number[]): Line;
     }
 
     interface RectConfig extends ShapeConfig {
@@ -640,7 +641,7 @@ declare module Kinetic {
     }
 
     class Rect extends Shape<Rect> {
-        constructor(RectConfig);
+        constructor(RectConfig : RectConfig);
         cornerRadius(): number;
         cornerRadius(cornerRadius: number): Rect;
     }
@@ -653,7 +654,7 @@ declare module Kinetic {
     }
 
     class Sprite extends Shape<Sprite> {
-        constructor(SpriteConfig);
+        constructor(SpriteConfig : SpriteConfig);
         start(): void;
         stop(): void;
         animation(): string;
@@ -680,7 +681,7 @@ declare module Kinetic {
     }
 
     class Text extends Shape<Text> {
-        constructor(TextConfig);
+        constructor(TextConfig : TextConfig);
         getTextWidth(): number;
         getTextHeight(): number;
         text(): string;
@@ -708,7 +709,7 @@ declare module Kinetic {
     }
 
     class Wedge extends Shape<Wedge> {
-        constructor(WedgeConfig);
+        constructor(WedgeConfig : WedgeConfig);
         angle(): number;
         angle(angle: number): Wedge;
         radius(): number;
@@ -726,7 +727,7 @@ declare module Kinetic {
     }
 
     class Tag extends Shape<Tag> {
-        constructor(TagConfig);
+        constructor(config : TagConfig);
         pointerDirection(): string;
         pointerDirection(pointerDirection: string): Tag;
         pointerWidth(): number;
@@ -742,7 +743,7 @@ declare module Kinetic {
     }
 
     class Label extends Group {
-        constructor(LabelInterface);
+        constructor(LabelInterface : LabelInterface);
         getText(): Text;
         getTag(): Rect;
     }
@@ -752,18 +753,18 @@ declare module Kinetic {
     }
 
     class Path extends Shape<Path> {
-        constructor(PathConfig);
+        constructor(PathConfig : PathConfig);
         data(): string;
         data(data: string): Path;
     }
 
-    interface StarConfig extends ShapeConfig {
+    interface RegularPolygonConfig extends ShapeConfig {
         sides: number;
         radius: number;
     }
 
     class RegularPolygon extends Shape<RegularPolygon> {
-        constructor(RegularPolygonConfig);
+        constructor(RegularPolygonConfig : RegularPolygonConfig);
         sides(): number;
         sides(sides: number): RegularPolygon;
         radius(): number;
@@ -777,7 +778,7 @@ declare module Kinetic {
     }
 
     class Star extends Shape<Star> {
-        constructor(StarConfig);
+        constructor(StarConfig : StarConfig);
         numPoints(): number;
         numPoints(numPoints: number): Star;
         innerRadius(): number;
@@ -795,7 +796,7 @@ declare module Kinetic {
     }
 
     class TextPath extends Shape<TextPath> {
-        constructor(TextPathConfig);
+        constructor(TextPathConfig : TextPathConfig);
         getTextWidth(): number;
         getTextHeight(): number;
         setText(text: string): void;
@@ -821,13 +822,13 @@ declare module Kinetic {
     class Transform {
         getMatrix(): any[];
         getTranslation() : Vector2d;
-        invert();
-        multiply(matrix: any[]);
-        rotate(deg: number);
-        scale(x: number, y: Number);
-        setAbsolutePosition();
-        skew(x: number, y: Number);
-        translate(x: number, y: Number);
+        invert() : void;
+        multiply(matrix: any[]) : void;
+        rotate(deg: number) : void;
+        scale(x: number, y: Number) : void;
+        setAbsolutePosition() : void;
+        skew(x: number, y: Number) : void;
+        translate(x: number, y: Number) : void;
     }
 
 
