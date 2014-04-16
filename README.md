@@ -12,6 +12,7 @@ So many information you can find on site: [http://kineticjs.com/](http://kinetic
 
 # Plugins:
 
+* [Debug mode](https://github.com/lavrton/kineticjs-tips-and-tools/tree/master/debug)
 * [Crosshair Shape](https://github.com/binoculars/KineticJS-plugins/tree/master/src/shapes)
 * [Multi touch support](https://github.com/atomictag/Kinetic.MultiTouch) - allow you to drag multiple nodes at same time
 * [Html to image converting](https://github.com/slash-system/KineticJS.HTML) (alpha)
