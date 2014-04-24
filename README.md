@@ -117,6 +117,7 @@ https://code.google.com/p/android/issues/detail?id=35474
 // TODO: check is it usefull and talking about current version
 // TODO: add descriptions
 
+* http://www.techrecite.com/html5-canvas-disc-rotation-animation-using-kineticjs/
 * http://jasonds.co.uk/Blog/analog-clock-kinetic
 * http://www.creativebloq.com/create-game-kineticjs-9134437
 * http://www.gamingthinktank.com/2013/06/03/tutorial-part-2-snake-game-using-html5-canvas-and-kineticjs/
