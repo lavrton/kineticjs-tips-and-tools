@@ -16,6 +16,7 @@ So many information you can find on site: [http://kineticjs.com/](http://kinetic
 * [Crosshair Shape](https://github.com/binoculars/KineticJS-plugins/tree/master/src/shapes)
 * [Multi touch support](https://github.com/atomictag/Kinetic.MultiTouch) - allow you to drag multiple nodes at same time
 * [Html to image converting](https://github.com/slash-system/KineticJS.HTML) (alpha)
+* [Greensock plugin for Kinetic](http://api.greensock.com/js/com/greensock/plugins/KineticPlugin.html)
 
 
 ### for work with other libs and frameworks:
