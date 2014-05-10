@@ -82,7 +82,10 @@ See discussion: https://github.com/ericdrowell/KineticJS/issues/821
 ## Ghost shapes
 
 Sometimes android device may have ghost shape on canvas. This is android bug. You can fix it by drawing layer with small (50ms) timeout. See for details: https://github.com/ericdrowell/KineticJS/issues/481#issuecomment-36096773
-Example:
+
+Please follow [this article](slash-system.com/en/how-to-fix-android-html5-canvas-issues/).
+
+
 ```javascript
 var stage = new Kinetic.Stage(conf);
 var layer = new Kinetic.Layer();
