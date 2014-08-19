@@ -20,9 +20,9 @@ So many information you can find on site: [http://kineticjs.com/](http://kinetic
 
 ### for work with other libs and frameworks:
 
-* [KineticJS plugin for KnockoutJS](https://github.com/fizmo/knockout-kinetic)
-* [BackboneJS Plugin](https://github.com/slash-system/backbone.kineticview)
-
+* [Knockout plugin](https://github.com/fizmo/knockout-kinetic)
+* [Backbone plugin](https://github.com/slash-system/backbone.kineticview)
+* [React plugin](https://github.com/freiksenet/react-kinetic)
 
 # Performance:
 
@@ -55,25 +55,6 @@ Also this stackoverflow posts can be usefull:
 ```
 Kinetic.pixelRatio = 1
 ``` 
-
-* On some android devices native canvas context function `getImageData` is slow. This one is using inside KineticJS to detect intersection with shape and pointer. If you have interactive application (with dragging) you may use this small hack:
-```javascript
-var oldFunc = stage.getIntersection;
-node.on("dragstart", () => {
-    stage.getIntersection = function(){
-        return node;
-    }
-});
-node.on("dragend", () => {
-    stage.getIntersection = oldFunc;
-});
-```
-Be carefull, it can break pointer event functionality while dragging, deepend on your application. You can try run this examples on you divece:
-
-1. Usual usage: http://jsfiddle.net/lavrton/Yp8gP/show/
-2. With hack: http://jsfiddle.net/lavrton/ANJ98/show
-3. 
-See discussion: https://github.com/ericdrowell/KineticJS/issues/821
 
 
 # Posible problems:
