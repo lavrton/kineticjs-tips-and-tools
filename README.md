@@ -15,7 +15,7 @@ So many information you can find on site: [http://kineticjs.com/](http://kinetic
 * [Debug mode](https://github.com/lavrton/kineticjs-tips-and-tools/tree/master/debug)
 * [Crosshair Shape](https://github.com/binoculars/KineticJS-plugins/tree/master/src/shapes)
 * [Multi touch support](https://github.com/atomictag/Kinetic.MultiTouch) - allow you to drag multiple nodes at same time
-* [Html to image converting](https://github.com/slash-system/KineticJS.HTML) (alpha)
+* [Greensock plugin for Kinetic](http://api.greensock.com/js/com/greensock/plugins/KineticPlugin.html)
 
 
 ### for work with other libs and frameworks:
@@ -62,7 +62,10 @@ Kinetic.pixelRatio = 1
 ## Ghost shapes
 
 Sometimes android device may have ghost shape on canvas. This is android bug. You can fix it by drawing layer with small (50ms) timeout. See for details: https://github.com/ericdrowell/KineticJS/issues/481#issuecomment-36096773
-Example:
+
+Please follow [this article](slash-system.com/en/how-to-fix-android-html5-canvas-issues/).
+
+
 ```javascript
 var stage = new Kinetic.Stage(conf);
 var layer = new Kinetic.Layer();
@@ -98,6 +101,8 @@ https://code.google.com/p/android/issues/detail?id=35474
 // TODO: check is it usefull and talking about current version
 // TODO: add descriptions
 
+* http://www.techrecite.com/html5-canvas-disc-rotation-animation-using-kineticjs/
+* http://jasonds.co.uk/Blog/analog-clock-kinetic
 * http://www.creativebloq.com/create-game-kineticjs-9134437
 * http://www.gamingthinktank.com/2013/06/03/tutorial-part-2-snake-game-using-html5-canvas-and-kineticjs/
 * http://www.creativebloq.com/create-game-kineticjs-9134437
@@ -112,6 +117,7 @@ https://code.google.com/p/android/issues/detail?id=35474
 * [TypeScript Definition](https://github.com/lavrton/kineticjs-tips-and-tools/blob/master/typescript/kinetic.d.ts)
 * [Using kineticjs with coffeescript](http://stackoverflow.com/questions/14530450/coffeescript-class/14536430#14536430)
 * [Drag&Drop DOM image to canvas](http://stackoverflow.com/questions/16271450/kineticjs-drag-and-drop-image-from-dom-into-canvas/16311898#16311898)
+* [Tween fillGradientColorStops Example](http://jsfiddle.net/ZH2AS/)
 
 
 
