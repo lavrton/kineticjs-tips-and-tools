@@ -10,12 +10,12 @@ Let's go!
 
 # Content:
 
-* [Applications](#Applications)
-* [Plugins](#Plugins)
-* [Performance](#Performance)
-* [Possible problems](#Possibleproblems)
-* [Articles](#Articles)
-* [Other](#Other)
+* [Applications](#applications)
+* [Plugins](#plugins)
+* [Performance](#performance)
+* [Possible problems](#possibleproblems)
+* [Articles](#articles)
+* [Other](#other)
 
 So many information you can find on site: [http://kineticjs.com/](http://kineticjs.com/)
 
