@@ -8,7 +8,22 @@ Please fork and make pull request or create issue if you have something interest
 
 Let's go!
 
+# Content:
+
+* [Applications](#Applications)
+* [Plugins](#Plugins)
+* [Performance](#Performance)
+* [Possible problems](#Possibleproblems)
+* [Articles](#Articles)
+* [Other](#Other)
+
 So many information you can find on site: [http://kineticjs.com/](http://kineticjs.com/)
+
+# Applications:
+
+* https://github.com/thehung111/node-discussion-board
+* https://github.com/mihhail-lapushkin/Ancient-Riddle
+* https://github.com/thehung111/simple-mobile-mockup
 
 # Plugins:
 
@@ -36,13 +51,14 @@ First, look at tutorial section on site:
 * Avoid to use shadows and strokes
 
 
-Also this stackoverflow posts can be usefull:
-
-* http://stackoverflow.com/questions/16191324/performance-problems-with-html5-canvas-in-some-mobile-browsers
-* http://stackoverflow.com/questions/18786085/kineticjs-moving-4000-tiles-with-stage-draggable?lq=1
-* http://stackoverflow.com/questions/17973947/how-to-cache-a-whole-layer-right-before-dragstart-and-revert-it-back-on-dragend/17997291#comment26545467_17997291
+Also this stackoverflow posts can be useful:
 
 // TODO : rewrite tips from answers to this file
+
+* [http://stackoverflow.com/questions/16191324/performance-problems-with-html5-canvas-in-some-mobile-browsers](#http://stackoverflow.com/questions/16191324/performance-problems-with-html5-canvas-in-some-mobile-browsers)
+* [http://stackoverflow.com/questions/18786085/kineticjs-moving-4000-tiles-with-stage-draggable?lq=1](#http://stackoverflow.com/questions/18786085/kineticjs-moving-4000-tiles-with-stage-draggable?lq=1)
+* [http://stackoverflow.com/questions/17973947/how-to-cache-a-whole-layer-right-before-dragstart-and-revert-it-back-on-dragend/17997291#comment26545467_17997291](http://stackoverflow.com/questions/17973947/how-to-cache-a-whole-layer-right-before-dragstart-and-revert-it-back-on-dragend/17997291#comment26545467_17997291)
+
 
 ### Mobile tips:
 
@@ -51,13 +67,13 @@ Also this stackoverflow posts can be usefull:
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 ```
 
-* If you have bad perfomance on retina display you can try change pixelRation:
+* If you have bad performance on retina display you can try to change pixelRation:
 ```
 Kinetic.pixelRatio = 1
 ``` 
 
 
-# Posible problems:
+# Possible problems:
 
 ## Ghost shapes
 
@@ -86,19 +102,17 @@ if (navigator.userAgent.match(/Android/i)) {
 You can find more related information here:
 https://code.google.com/p/android/issues/detail?id=35474
 
-# IDE tools:
+## Caching
 
-# Examples with sources:
-
-// TODO test them...
-* https://github.com/mindmup/mapjs
-* https://github.com/thehung111/node-discussion-board
-* https://github.com/mihhail-lapushkin/Ancient-Riddle
-* https://github.com/thehung111/simple-mobile-mockup
+Currently (v5.1.0) KineticJS has problems with cache if node has some transformation (rotate, scale, offset), so if you have any problems with caching try:
+ 
+ 1. Reset transform
+ 2. Cache node
+ 3. Apply transform again
 
 # Articles:
 
-// TODO: check is it usefull and talking about current version
+// TODO: check is it useful and talking about current version
 // TODO: add descriptions
 
 * http://www.techrecite.com/html5-canvas-disc-rotation-animation-using-kineticjs/
