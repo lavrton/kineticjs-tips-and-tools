@@ -81,6 +81,7 @@ declare module Kinetic {
         offsetX? : number;
         offsetY? : number;
         draggable?: boolean;
+        dragDistance?: number;
         dragBoundFunc?: Function;
     }
 
@@ -98,7 +99,7 @@ declare module Kinetic {
     }
 
     interface CacheConfig extends SizeConfig{
-        showBorder? : boolean;
+        drawBorder? : boolean;
     }
 
     interface ClearConfig extends SizeConfig{
@@ -112,6 +113,8 @@ declare module Kinetic {
         blue(blue: number) : This;
         blurRadius() : number;
         blurRadius(radius: number) : This;
+        brightness() : number;
+        brightness(brightness: number) : This;
         cache(config?: CacheConfig) : This;
         clearCache() : This;
         clear(bounds?: ClearConfig) : This;
@@ -146,7 +149,7 @@ declare module Kinetic {
         // CHECK
         getCanvas() : Canvas;
         getClassName() : string;
-        getContext() : Context;
+        getContent() : HTMLDivElement;
         getDepth() : number;
         getHeight() : number;
         getHitCanvas() : Canvas;
@@ -169,8 +172,8 @@ declare module Kinetic {
         hide(): void;
         hue() : number;
         hue(hue: number) : This;
-        id() : number;
-        id(id: number) : This;
+        id() : string;
+        id(id: string) : This;
         isDragging(): boolean;
         isListening(): boolean;
         isVisible(): boolean;
@@ -266,7 +269,7 @@ declare module Kinetic {
     class Container<This> extends Node <This> {
         constructor(params?: ContainerConfig);
         add(child : Node<Node<any>>): This;
-        getChildren() : Collection;
+        getChildren(filterfunc?: Function) : Collection;
         clip(): SizeConfig;
         clip(clip: SizeConfig) : This;
         clipHeight(): number;
