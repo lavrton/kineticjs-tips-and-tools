@@ -1,6 +1,8 @@
 KineticJS tips and tools
 ========================
 
+KineticJS is not maineined any more, see [https://github.com/ericdrowell/KineticJS](https://github.com/ericdrowell/KineticJS). But I maintain it's fork [Konva](http://konvajs.github.io/). You can submit any interesting stuff here [https://github.com/konvajs/konva/issues](https://github.com/konvajs/konva/issues)
+
 KineticJS is an HTML5 Canvas JavaScript framework that enables high performance animations, transitions, node nesting, layering, filtering, caching, event handling for desktop and mobile applications, and much more.
 
 This is collection of any usefull KineticJS stuff.
