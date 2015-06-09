@@ -1,11 +1,11 @@
 KineticJS tips and tools
 ========================
 
-KineticJS is not maineined any more, see [https://github.com/ericdrowell/KineticJS](https://github.com/ericdrowell/KineticJS). But I maintain it's fork [Konva](http://konvajs.github.io/). You can submit any interesting stuff here [https://github.com/konvajs/konva/issues](https://github.com/konvajs/konva/issues)
+KineticJS is not maintained any more, see [https://github.com/ericdrowell/KineticJS](https://github.com/ericdrowell/KineticJS). But I maintain it's fork [Konva](http://konvajs.github.io/). You can submit any interesting stuff here [https://github.com/konvajs/konva/issues](https://github.com/konvajs/konva/issues)
 
 KineticJS is an HTML5 Canvas JavaScript framework that enables high performance animations, transitions, node nesting, layering, filtering, caching, event handling for desktop and mobile applications, and much more.
 
-This is collection of any usefull KineticJS stuff.
+This is a collection of useful stuff related to KineticJS.
 Please fork and make pull request or create issue if you have something interesting!
 
 Let's go!
@@ -19,7 +19,7 @@ Let's go!
 * [Articles](#articles)
 * [Other](#other)
 
-So many information you can find on site: [http://kineticjs.com/](http://kineticjs.com/)
+Primary source of information is the KineticJS site: [http://kineticjs.com/](http://kineticjs.com/)
 
 # Applications:
 
@@ -35,7 +35,7 @@ So many information you can find on site: [http://kineticjs.com/](http://kinetic
 * [Greensock plugin for Kinetic](http://api.greensock.com/js/com/greensock/plugins/KineticPlugin.html)
 
 
-### for work with other libs and frameworks:
+### working with other libs and frameworks:
 
 * [Knockout plugin](https://github.com/fizmo/knockout-kinetic)
 * [Backbone plugin](https://github.com/slash-system/backbone.kineticview)
@@ -43,7 +43,7 @@ So many information you can find on site: [http://kineticjs.com/](http://kinetic
 
 # Performance:
 
-First, look at tutorial section on site:
+First, look at the tutorial sections:
 
 * [Layers](http://www.html5canvastutorials.com/kineticjs/html5-canvas-layer-management-with-kineticjs/)
 * [BatchDraw](http://www.html5canvastutorials.com/kineticjs/html5-canvas-kineticjs-batch-draw/)
@@ -53,7 +53,7 @@ First, look at tutorial section on site:
 * Avoid to use shadows and strokes
 
 
-Also this stackoverflow posts can be useful:
+Also these stackoverflow posts can be useful:
 
 // TODO : rewrite tips from answers to this file
 
